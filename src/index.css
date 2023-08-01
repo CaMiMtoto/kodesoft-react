@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.flickity-prev-next-button {
+    @apply bg-primary-light text-white h-5 w-5 p-4;
+}
+
+.flickity-button:hover {
+    @apply bg-white text-primary;
+}
+.flickity-page-dot {
+    @apply bg-primary-light w-10 h-1.5 rounded-none;
+}
+.flickity-page-dot.is-selected {
+    @apply bg-white;
+}
