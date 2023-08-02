@@ -8,6 +8,13 @@ import 'flickity/dist/flickity.min.css';
 import Flickity from 'flickity';
 import CarouselItem from "./components/carousel/CarouselItem.jsx";
 
+function PartnerItem({url}) {
+    return <div className="flex justify-center items-center">
+        <img src={url} alt="partner"
+             className="w-28 h-20 object-contain hover:scale-105 transition"/>
+    </div>;
+}
+
 function App() {
     const [open, setOpen] = useState(false);
 
@@ -195,7 +202,26 @@ function App() {
                     </div>
                 </div>
             </section>
-
+            {/*Our partners*/}
+            <section className="bg-gray-100 px-10 py-4">
+                <h1 className="text-3xl text-center my-10 font-semibold font-serif">
+                    Know Who Working With Us
+                </h1>
+                <div className="grid lg:grid-cols-4 2xl:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-10 max-w-7xl mx-auto">
+                    <PartnerItem url="https://1000marcas.net/wp-content/uploads/2019/12/Huawei-Logo-2006.png"/>
+                    <PartnerItem url="https://www.criteo.com/wp-content/uploads/2022/04/FreshDirect-Logo.png"/>
+                    <PartnerItem url="https://logos-world.net/wp-content/uploads/2020/04/Nike-Logo.png"/>
+                    <PartnerItem url="https://ontabee.s3.amazonaws.com/kfc-rwanda/app-logo/ZdVKGOpVjM4RXzKX.png"/>
+                    <PartnerItem url="https://afrifoodsltd.com/wp-content/uploads/2021/10/Afrifoods_Logo_Full_Colour-150x87.png"/>
+                    <PartnerItem url="https://mms.businesswire.com/media/20210331005579/en/868438/5/instacart-logo-wordmark-4000x1600-e4f3c6f.jpg"/>
+                    <PartnerItem url="https://ontabee.s3.amazonaws.com/kfc-rwanda/app-logo/ZdVKGOpVjM4RXzKX.png"/>
+                    <PartnerItem url="https://qph.cf2.quoracdn.net/main-qimg-f3ecf9c6da8dc2c1a5266a9f1a653bf8"/>
+                    <PartnerItem url="https://afrifoodsltd.com/wp-content/uploads/2021/10/Afrifoods_Logo_Full_Colour-150x87.png"/>
+                    <PartnerItem url="https://ontabee.s3.amazonaws.com/kfc-rwanda/app-logo/ZdVKGOpVjM4RXzKX.png"/>
+                    <PartnerItem url="https://1000logos.net/wp-content/uploads/2021/04/Uber-Eats-logo.png"/>
+                    <PartnerItem url="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/1280px-Adidas_Logo.svg.png"/>
+                </div>
+            </section>
         </div>
     )
 }
