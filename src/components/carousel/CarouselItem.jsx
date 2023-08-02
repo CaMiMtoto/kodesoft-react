@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 import _ from "lodash";
 
-CarouselItem.PropTypes = {
+CarouselItem.propTypes = {
     itemCount: PropTypes.number.isRequired,
-    name:PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
+    position: PropTypes.string.isRequired
 };
 
-export default function CarouselItem({itemCount,name,position}) {
+export default function CarouselItem({itemCount, name, position}) {
     let filledStars = _.range(0, itemCount);
     let unFilledStarts = _.range(0, 5 - itemCount);
     return <div className="carousel-cell px-20">

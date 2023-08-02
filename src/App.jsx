@@ -9,6 +9,11 @@ import Flickity from 'flickity';
 import CarouselItem from "./components/carousel/CarouselItem.jsx";
 import Input from "./components/common/Input.jsx";
 import contactBg from "./assets/contact_bg.svg";
+import PropTypes from "prop-types";
+
+PartnerItem.propTypes = {
+    url: PropTypes.string.isRequired
+};
 
 function PartnerItem({url}) {
     return <div className="flex justify-center items-center">
@@ -35,7 +40,7 @@ function App() {
         <div className="font-sans">
             <Navbar onClick={toggleMenu} open={open}/>
             <section style={{backgroundImage: `url(${homeBg})`}}
-                     className="h-[80vh] bg-no-repeat bg-contain lg:px-20 py-10 grid md:grid-cols-2   px-8 max-w-7xl mx-auto">
+                     className="md:h-[80vh] bg-no-repeat bg-contain lg:px-20 py-10 grid md:grid-cols-2   px-8 max-w-7xl mx-auto">
                 <div className="flex flex-col gap-10">
                     <h1 className="text-2xl sm:text-5xl font-semibold font-serif leading-loose">
                         Transforming Your Ideas Into Groundbreaking Software Solutions.
@@ -230,9 +235,9 @@ function App() {
                 </div>
             </section>
             {/*Contact us form*/}
-            <section className=" p-8 bg-no-repeat bg-left-bottom bg-cover"
+            <section className="md:p-8 bg-no-repeat bg-left-bottom bg-cover"
                      style={{backgroundImage: `url(${contactBg})`}}>
-                <div className="bg-light py-10 max-w-7xl mx-auto rounded-lg my-10">
+                <div className="bg-light py-10 px-8 max-w-7xl mx-auto md:rounded-lg my-10">
                     <div className="max-w-4xl mx-auto">
                         <h1 className="text-3xl font-semibold font-serif">
                             Get Your Project Done
@@ -248,9 +253,11 @@ function App() {
                                 <Input placeholder="Email" className="py-4" name="email" id="email" type="email"/>
                             </div>
                             <Input placeholder="Subject" className="py-4" name="subject" id="subject"/>
-                            <textarea name="message" id="message" cols="30" rows="10"
-                                      className="border-2 border-gray-100 px-4 py-2 rounded-md focus:outline-none focus:border-warning w-full focus:ring focus:ring-warning/30 placeholder:text-gray-500  placeholder:text-sm"
-                                      placeholder="Message"></textarea>
+                            <div className="my-4">
+                                <textarea name="message" id="message" cols="30" rows="10"
+                                          className="border-2 border-gray-100 px-4 py-2 rounded-md focus:outline-none focus:border-warning w-full focus:ring focus:ring-warning/30 placeholder:text-gray-500  placeholder:text-sm"
+                                          placeholder="Message"></textarea>
+                            </div>
                             <div className="text-center">
                                 <button type="submit"
                                         className="px-8 bg-success font-semibold tracking-wider text-white py-4  hover:bg-success/80 hover:scale-105 transition rounded-0">

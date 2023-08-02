@@ -1,3 +1,14 @@
+import PropTypes from "prop-types";
+
+Input.propTypes = {
+    label: PropTypes.string,
+    name: PropTypes.string,
+    error: PropTypes.string,
+    placeholder: PropTypes.string,
+    className: PropTypes.string,
+    type: PropTypes.string,
+}
+
 export default function Input({label, name, error, placeholder, className, type = "text", ...rest}) {
     return (
         <div className="my-3">
