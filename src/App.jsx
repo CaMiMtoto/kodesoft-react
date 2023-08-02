@@ -7,6 +7,8 @@ import Navbar from "./components/Navbar.jsx";
 import 'flickity/dist/flickity.min.css';
 import Flickity from 'flickity';
 import CarouselItem from "./components/carousel/CarouselItem.jsx";
+import Input from "./components/common/Input.jsx";
+import contactBg from "./assets/contact_bg.svg";
 
 function PartnerItem({url}) {
     return <div className="flex justify-center items-center">
@@ -203,25 +205,136 @@ function App() {
                 </div>
             </section>
             {/*Our partners*/}
-            <section className="bg-gray-100 px-10 py-4">
+            <section className="bg-white px-10 py-4">
                 <h1 className="text-3xl text-center my-10 font-semibold font-serif">
                     Know Who Working With Us
                 </h1>
-                <div className="grid lg:grid-cols-4 2xl:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-10 max-w-7xl mx-auto">
+                <div
+                    className="grid lg:grid-cols-4 2xl:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-10 max-w-7xl mx-auto">
                     <PartnerItem url="https://1000marcas.net/wp-content/uploads/2019/12/Huawei-Logo-2006.png"/>
                     <PartnerItem url="https://www.criteo.com/wp-content/uploads/2022/04/FreshDirect-Logo.png"/>
                     <PartnerItem url="https://logos-world.net/wp-content/uploads/2020/04/Nike-Logo.png"/>
                     <PartnerItem url="https://ontabee.s3.amazonaws.com/kfc-rwanda/app-logo/ZdVKGOpVjM4RXzKX.png"/>
-                    <PartnerItem url="https://afrifoodsltd.com/wp-content/uploads/2021/10/Afrifoods_Logo_Full_Colour-150x87.png"/>
-                    <PartnerItem url="https://mms.businesswire.com/media/20210331005579/en/868438/5/instacart-logo-wordmark-4000x1600-e4f3c6f.jpg"/>
+                    <PartnerItem
+                        url="https://afrifoodsltd.com/wp-content/uploads/2021/10/Afrifoods_Logo_Full_Colour-150x87.png"/>
+                    <PartnerItem
+                        url="https://mms.businesswire.com/media/20210331005579/en/868438/5/instacart-logo-wordmark-4000x1600-e4f3c6f.jpg"/>
                     <PartnerItem url="https://ontabee.s3.amazonaws.com/kfc-rwanda/app-logo/ZdVKGOpVjM4RXzKX.png"/>
                     <PartnerItem url="https://qph.cf2.quoracdn.net/main-qimg-f3ecf9c6da8dc2c1a5266a9f1a653bf8"/>
-                    <PartnerItem url="https://afrifoodsltd.com/wp-content/uploads/2021/10/Afrifoods_Logo_Full_Colour-150x87.png"/>
+                    <PartnerItem
+                        url="https://afrifoodsltd.com/wp-content/uploads/2021/10/Afrifoods_Logo_Full_Colour-150x87.png"/>
                     <PartnerItem url="https://ontabee.s3.amazonaws.com/kfc-rwanda/app-logo/ZdVKGOpVjM4RXzKX.png"/>
                     <PartnerItem url="https://1000logos.net/wp-content/uploads/2021/04/Uber-Eats-logo.png"/>
-                    <PartnerItem url="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/1280px-Adidas_Logo.svg.png"/>
+                    <PartnerItem
+                        url="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/1280px-Adidas_Logo.svg.png"/>
                 </div>
             </section>
+            {/*Contact us form*/}
+            <section className=" p-8 bg-no-repeat bg-left-bottom bg-cover"
+                     style={{backgroundImage: `url(${contactBg})`}}>
+                <div className="bg-light py-10 max-w-7xl mx-auto rounded-lg my-10">
+                    <div className="max-w-4xl mx-auto">
+                        <h1 className="text-3xl font-semibold font-serif">
+                            Get Your Project Done
+                        </h1>
+                        <p className="text-gray-600 my-4">
+                            We are here to help you with your project. Let us know what you need and we will get
+                            back
+                            to you as soon as possible.
+                        </p>
+                        <form>
+                            <div className="grid md:grid-cols-2 gap-4">
+                                <Input placeholder="Names" className="py-4" name="name" id="name"/>
+                                <Input placeholder="Email" className="py-4" name="email" id="email" type="email"/>
+                            </div>
+                            <Input placeholder="Subject" className="py-4" name="subject" id="subject"/>
+                            <textarea name="message" id="message" cols="30" rows="10"
+                                      className="border-2 border-gray-100 px-4 py-2 rounded-md focus:outline-none focus:border-warning w-full focus:ring focus:ring-warning/30 placeholder:text-gray-500  placeholder:text-sm"
+                                      placeholder="Message"></textarea>
+                            <div className="text-center">
+                                <button type="submit"
+                                        className="px-8 bg-success font-semibold tracking-wider text-white py-4  hover:bg-success/80 hover:scale-105 transition rounded-0">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            {/*footer*/}
+            <footer className="bg-primary py-10 -mt-3 border-t-4 border-t-primary-light">
+                <div className="grid lg:grid-cols-3 gap-10 max-w-7xl mx-auto px-8">
+                    <div className="flex flex-col gap-4">
+                        <h1 className="text-2xl font-semibold font-serif text-white">
+                            Kodesoft Ltd.
+                        </h1>
+                        <p className="text-gray-300">
+                            Kodesoft is a software development company that provides software solutions to businesses
+                            and individuals. We are a team of highly skilled software developers who are passionate
+                            about what we do.
+                        </p>
+
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1 className="text-lg  font-semibold font-serif text-white">
+                            Contact Us:
+                        </h1>
+                        <div className="flex justify-center flex-col gap-4">
+                            <a href="" className="text-white">
+                                <i className="bi bi-telephone-fill text-primary-light"></i>
+                                <span className="ml-2">+25 0780 661 813</span>
+                            </a>
+                            <a href="" className="text-white">
+                                <i className="bi bi-envelope-fill text-primary-light"></i>
+                                <span className="ml-2">contact@kodesoft.com</span>
+                            </a>
+                            <a href="" className="text-white">
+                                <i className="bi bi-geo-alt-fill text-primary-light"></i>
+                                <span className="ml-2">Kigali, Rwanda KN 202 ST</span>
+                            </a>
+                        </div>
+                        <h1 className="text-lg  font-semibold font-serif text-white">
+                            Follow Us:
+                        </h1>
+                        <div className="flex  gap-4">
+                            <a href="" className="text-white hover:scale-125 transition">
+                                <i className="bi bi-facebook text-2xl"></i>
+                            </a>
+                            <a href="" className="text-white hover:scale-125 transition">
+                                <i className="bi bi-twitter text-2xl"></i>
+                            </a>
+                            <a href="" className="text-white hover:scale-125 transition">
+                                <i className="bi bi-instagram text-2xl"></i>
+                            </a>
+                            <a href="" className="text-white hover:scale-125 transition">
+                                <i className="bi bi-linkedin text-2xl"></i>
+                            </a>
+                            <a href="" className="text-white hover:scale-125 transition">
+                                <i className="bi bi-pinterest text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1 className="text-2xl font-semibold font-serif text-white">
+                            Our Services
+                        </h1>
+                        <div className="flex flex-col gap-2">
+                            <a href="" className="text-white">
+                                Web Development
+                            </a>
+                            <a href="" className="text-white">
+                                Mobile App Development
+                            </a>
+                            <a href="" className="text-white">
+                                UI/UX Design
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className="text-center text-white text-sm mt-10">
+                    &copy; 2021 Kodesoft. All Rights Reserved.
+                </div>
+            </footer>
         </div>
     )
 }
